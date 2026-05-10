@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Presente para Mamãe</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f3fa;
+            color: #362542; 
+        }
+        section {
+            padding: 60px 20px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h1, h2 {
+            font-family: 'Garamond', 'Times New Roman', serif;
+            color: #8854a5; 
+        }
+        h1 { font-size: 3em; }
+        h2 { font-size: 2.5em; }
+        p { font-size: 1.2em; max-width: 650px; line-height: 1.7; }
+
+        .hero {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                              url('https://img.freepik.com/vetores-gratis/fundo-de-coracao-de-flores-silvestres-de-design-plano_23-2150429858.jpg?semt=ais_hybrid&w=740&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #9b6bb5; 
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .button:hover { background-color: #8854a5; }
+
+        .vale-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            max-width: 900px;
+        }
+        .vale-card {
+            background-color: #fff;
+            border: 2px dashed #a374bd; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(136, 84, 165, 0.1); 
+        }
+        .vale-card h3 { margin-top: 0; color: #6c3f85; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(136, 84, 165, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.04);
+        }
+
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #b08bd4, #8854a5);
+            color: white;
+        }
+        footer h2 { color: white; }
+    </style>
+</head>
+<body>
+
+    <section id="inicio" class="hero">
+        <h1>Para a melhor mãe do mundo, um presente especial.</h1>
+        <p>Feliz Dia das Mães, para a melhor mãe que eu conheço! Como não tenho dinheiro pra comprar um presente kkkkkk, fiz este site pra você, espero que goste, te amo muito.</p>
+   
+        <a href="#carta" class="button">Abrir meu presente</a>
+    </section>
+
+    <section id="carta">
+        <h2>Uma carta para você, ou quase</h2>
+        <p>
+            Mãe, muito obrigado por tudo que você fez por mim, por me criar, por me educar, por me amar, por me dar tudo o que eu precisava, mesmo quando eu não merecia. Você é a pessoa mais importante da minha vida e eu sou muito grato por ter você como minha mãe. Eu te amo muito e espero que este presente seja apenas uma pequena demonstração do meu amor e gratidão por você. Feliz Dia das Mães!
+        </p>
+    </section>
+
+    <section id="vales">
+        <h2>Vale-Carinho: Use sem moderação!</h2>
+        <p>Como presente, te dou o que tenho de mais precioso: meu tempo e meu carinho. Abaixo estão alguns vales que você pode resgatar quando quiser!</p>
+        <div class="vale-container">
+            <div class="vale-card">
+                <h3>Vale 1 Café da Manhã na Cama</h3>
+                <p>Com direito a tudo que você gosta e tem em casa kkkk</p>
+            </div>
+            <div class="vale-card">
+                <h3>Vale 1 Sessão de Cinema</h3>
+                <p>Eu preparo a pipoca, você escolhe o filme</p>
+            </div>
+            <div class="vale-card">
+                <h3>Vale 1 louça completo</h3>
+                <p>Lavo todas as louças sem reclamar inclusive panelas</p>
+            </div>
+            <div class="vale-card">
+                <h3>Vale 1 Abraço de Urso</h3>
+                <p>Abraço é bom</p>
+            </div>
+        </div>
+    </section>
+
+          <section id="galeria">
+        <h2>Nosso Cantinho de Memórias</h2>
+        <div class="gallery">
+            <img src="foto 1.jpg" alt="Nossa memória 1">
+            <img src="foto 2.jpg" alt="Nossa memória 2">
+            <img src="foto 3.png" alt="Nossa memória 3"> 
+            <img src="foto 4.png" alt="Nossa memória 4"> 
+            <img src="foto 5.jpg" alt="Nossa memória 5">
+            <img src="foto 6.jpg" alt="Nossa memória 6">
+        </div>
+    </section>
+
+    <footer>
+        <h2>Feliz Dia das Mães. Eu te amo infinitamente.</h2>
+        <p style="font-size: 1.1em;">Feito com todo o amor do mundo pelo seu filho favorito</p>
+    </footer>
+
+</body>
+</html>

@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Um Presente para Mamãe</title>
     <style>
-        /* Importando fontes modernas e nítidas para telas de celular */
+        /* Importando fontes modernas e nítidas */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap');
 
-        /* Evita que o site passe da largura da tela no celular */
         * {
             box-sizing: border-box;
         }
@@ -17,12 +16,13 @@
             scroll-behavior: smooth;
         }
 
+        /* TEMA ESCURO: Fundo escuro profundo e texto claro */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f3fa;
-            color: #362542; 
+            background-color: #1e1924; /* Fundo escuro chique */
+            color: #ded3e0; /* Texto cinza-claro suave */
             overflow-x: hidden;
         }
 
@@ -39,19 +39,20 @@
 
         h1, h2 {
             font-family: 'Playfair Display', serif;
-            color: #8854a5; 
+            color: #e2b3ff; /* Lilás vibrante brilhante para o escuro */
             font-weight: 600;
             margin-top: 0;
             margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
 
         h1 { font-size: 3.2em; line-height: 1.2; }
         h2 { font-size: 2.5em; }
-        p { font-size: 1.15em; max-width: 650px; line-height: 1.7; color: #4a335a; margin: 0 auto 15px auto; }
+        p { font-size: 1.15em; max-width: 650px; line-height: 1.7; color: #cbbacf; margin: 0 auto 15px auto; }
 
-        /* TOPO DO SITE */
+        /* TOPO DO SITE (Com sobreposição escura na foto) */
         .hero {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+            background-image: linear-gradient(rgba(30, 25, 36, 0.88), rgba(30, 25, 36, 0.88)), 
                               url('https://img.freepik.com/vetores-gratis/fundo-de-coracao-de-flores-silvestres-de-design-plano_23-2150429858.jpg?semt=ais_hybrid&w=740&q=80');
             background-size: cover;
             background-position: center;
@@ -61,7 +62,7 @@
         /* BOTÃO PREMIUM */
         .button {
             display: inline-block;
-            background: linear-gradient(135deg, #a374bd, #8854a5);
+            background: linear-gradient(135deg, #a374bd, #754293);
             color: white !important;
             padding: 16px 36px;
             text-decoration: none;
@@ -69,26 +70,27 @@
             font-size: 1.1em;
             font-weight: 500;
             margin-top: 15px;
-            box-shadow: 0 8px 20px rgba(136, 84, 165, 0.25);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, background 0.3s;
         }
         .button:hover { 
             transform: translateY(-3px);
-            background: linear-gradient(135deg, #9562b0, #794596);
+            background: linear-gradient(135deg, #b585cf, #8854a5);
         }
 
-        /* SEÇÃO DA CARTA (Com fundo branco para destacar) */
+        /* SEÇÃO DA CARTA (Fundo cinza escuro elegante) */
         .carta-container {
-            background-color: #ffffff;
+            background-color: #2d2633; /* Fundo da caixa escuro */
             padding: 40px 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(136, 84, 165, 0.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             max-width: 800px;
             width: 100%;
-            border-top: 5px solid #8854a5;
+            border-top: 5px solid #a374bd;
         }
+        .carta-container p { color: #ded3e0; }
 
-        /* VALES-CARINHO */
+        /* VALES-CARINHO no escuro */
         .vale-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -98,19 +100,19 @@
             width: 100%;
         }
         .vale-card {
-            background-color: #fff;
-            border: 2px dashed #b08bd4; 
+            background-color: #2d2633;
+            border: 2px dashed #724e87; 
             padding: 25px 20px;
             border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(136, 84, 165, 0.05); 
-            transition: transform 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s, border-color 0.3s;
         }
         .vale-card:hover {
             transform: translateY(-5px);
-            border-color: #8854a5;
+            border-color: #e2b3ff;
         }
-        .vale-card h3 { margin-top: 0; margin-bottom: 10px; color: #6c3f85; font-size: 1.2em; font-weight: 600; }
-        .vale-card p { font-size: 1em; margin-bottom: 0; }
+        .vale-card h3 { margin-top: 0; margin-bottom: 10px; color: #e2b3ff; font-size: 1.2em; font-weight: 600; }
+        .vale-card p { font-size: 1em; margin-bottom: 0; color: #cbbacf; }
 
         /* GALERIA DE FOTOS */
         .gallery {
@@ -126,49 +128,48 @@
             height: 320px;
             object-fit: cover;
             border-radius: 16px;
-            box-shadow: 0 6px 15px rgba(136, 84, 165, 0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
 
-        /* RODAPÉ */
+        /* RODAPÉ ESCURO */
         footer {
             padding: 60px 20px;
             text-align: center;
-            background: linear-gradient(135deg, #b08bd4, #8854a5);
+            background: linear-gradient(135deg, #27202e, #1a151f);
+            border-top: 1px solid #3d3347;
             color: white;
             width: 100%;
         }
-        footer h2 { color: white; margin-bottom: 5px; }
-        footer p { color: #fdfafd; margin-bottom: 0; }
+        footer h2 { color: #e2b3ff; margin-bottom: 5px; }
+        footer p { color: #a698ab; margin-bottom: 0; }
 
 
         /* ==========================================
-           MÁGICA PARA TELAS DE CELULAR (Responsividade)
+           RESPONSIVIDADE PARA CELULAR
            ========================================== */
         @media (max-width: 768px) {
             section {
-                padding: 50px 15px; /* Menos espaço em branco nas laterais */
+                padding: 50px 15px;
                 min-height: auto;
             }
             
             .hero {
-                min-height: 85vh; /* O topo ainda ocupa a tela toda */
-                background-attachment: scroll; /* Corrige bug de imagem no iPhone */
+                min-height: 85vh;
+                background-attachment: scroll;
             }
 
             h1 { font-size: 2.3em; }
             h2 { font-size: 2em; }
             p { font-size: 1.05em; }
 
-            /* A carta no celular fica alinhada à esquerda para facilitar a leitura */
             .carta-container {
                 padding: 30px 20px;
                 text-align: left;
             }
             .carta-container h2 {
-                text-align: center; /* Mantém só o título centralizado */
+                text-align: center;
             }
 
-            /* Fotos mais baixinhas para não cansar o dedo rolando a tela */
             .gallery img { 
                 height: 260px; 
             }
